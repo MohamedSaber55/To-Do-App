@@ -1,0 +1,114 @@
+$mainColor :#45adff;
+$bodyColor : #171722;
+$btnColor : #45adff;
+$divBg:rgb(110, 110, 110);
+$mainPadding : 1rem;
+$mainMargin : 1rem;
+$mainTextColor: #f1f1ff;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bodyColor;
+    font-family: 'Cairo', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: $mainPadding*2 $mainPadding;
+    @media (min-width: 768px) {
+        width : 80%;
+    }
+    h1 {
+        color: $mainTextColor;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .form {
+        margin: $mainMargin auto;
+        @media (min-width: 768px) {
+            width : 75%;
+        };
+        @media (min-width: 447px) {
+            width : 75%;
+        }
+
+        .box {
+            position: relative;
+
+            .input {
+                width: 100%;
+                padding: $mainPadding;
+                font-size: 1em;
+                border: 0;
+                border-radius: 5px;
+                background-color: #f1f1f1;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            .add {
+                &:hover {
+                    background-color:$btnColor;
+                }
+                background-color: rgb(66, 134, 223);
+                color:$mainTextColor;
+                cursor: pointer;
+                border:0;
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px;
+                padding: 16px;
+                position: absolute;
+                right: 0px;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .tasks{
+        user-select: none;
+        margin: $mainMargin*3 auto;
+        padding: $mainPadding;
+        border-radius: 5px;
+        background-color:#5c5a5a;
+        @media (min-width: 768px) {
+            width : 75%;
+        };
+        @media (min-width: 447px) {
+            width : 75%;
+        }
+        .done{
+            background-color:#57b159 !important;
+        }
+        .task {
+            color: $mainTextColor;
+            background-color: #171722;
+            margin: $mainMargin 0;
+            padding: $mainPadding*0.75 $mainPadding;
+            border-radius: 5px;
+            position: relative;
+
+            .delete{
+                &:hover { background: rgb(230, 22, 22)}
+                background-color: rgb(138, 9, 9);
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 5px;
+                padding: $mainPadding*0.75 $mainPadding;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
